@@ -12,6 +12,7 @@ Characters = [	"Amber", 	"Barbara", 	"Bennet", 	"Candace", 	"Collei",
 
 
 numberOfChars = int(sys.argv[1])
+fileName = 'genshinWeights.txt'
 
 """
 selectedChars = random.sample(Characters, k = numberOfChars)
@@ -23,7 +24,7 @@ for c in selectedChars:
 """
 
 #Read in stuff from file
-with open('genshinWeights.txt','r') as file:
+with open(fileName,'r') as file:
 	fileContents = file.read().splitlines()
 
 #Create dictionary
@@ -56,7 +57,7 @@ for selChar in selectedChars:
 	characterDictionary[selChar] = 1
 
 #rewrite the new dictionary to the file
-with open('genshinWeights.txt', 'w') as file:
+with open(fileName, 'w') as file:
 	for key in characterDictionary:
 		file.write(key + '\n')
 		file.write(str(characterDictionary[key]) + '\n')
