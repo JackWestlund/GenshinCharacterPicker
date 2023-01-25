@@ -35,6 +35,9 @@ while i < len(fileContents):
 	characterDictionary[fileContents[i]] = int(fileContents[i+1])
 	i = i+2
 
+#Print current characters and weight values
+print("\n", characterDictionary, "\n")
+
 #itirate over numberOfChars
 #generate random character
 #add it to the list of selected chracters
